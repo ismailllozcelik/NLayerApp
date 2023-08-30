@@ -21,5 +21,13 @@ namespace NLayer.Repository
         //product feature aslında products üzerinden doldurulmalı
         // öğrenmek amaçlı açık tutuyoruz
         public DbSet<ProductFeature> productFeatures { get; set; }
+
+
+
+        // fluent api
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
