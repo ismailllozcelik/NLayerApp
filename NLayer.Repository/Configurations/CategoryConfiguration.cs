@@ -23,7 +23,7 @@ namespace NLayer.Repository.Configurations
             builder.Property(x => x.Id).UseIdentityColumn();
 
             //name alanı max 50 karakter olsun
-            builder.Property(x => x.Name).HasMaxLength(50);
+            builder.Property(x => x.Name).IsRequired().HasMaxLength(50);
 
             builder.ToTable("Categories");
         }
