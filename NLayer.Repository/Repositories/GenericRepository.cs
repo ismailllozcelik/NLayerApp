@@ -43,7 +43,7 @@ namespace NLayer.Repository.Repositories
             return await _dbSet.AnyAsync(expression);
         }
 
-        public IQueryable<T> GetAll(Expression<Func<T, bool>> expression)
+        public IQueryable<T> GetAll()
         {
             // EF Core 10k data çektiğinde hepsini memoryde tutup
             // performans kaybına sebeb olmasın diye asnotracking kullanıldı
